@@ -233,6 +233,32 @@ root.reset()
 ```
 
 ---
+
+![Example image](example3.png)
+```python
+from profilecard import Pf
+
+root = Pf(first=False)
+root.set_style("2")
+root.set_type(type="custom")
+root.add_id("jyst06")
+root.set_name("James")
+root.set_pic("https://i.pinimg.com/564x/59/dc/8d/59dc8d6797b835e746dd99a2df7dcedd.jpg")
+
+root.add_badge(icon="github", text="GitHub", link="https://github.com/jyst06", bg_color="white", color="black")
+
+root.set_theme("light")
+root.add_info("Hello")
+root.set_card_title("About Me")
+root.set_site_title("my site")
+root.add_contect("Nope :(")
+root.set_background_pic(r"https://images6.alphacoders.com/133/1330710.png")
+root.pack()
+root.show()
+root.reset()
+```
+
+---
 ## Contributing
 
 Contributions are welcome! Please fork the repository and open a pull request with your changes.

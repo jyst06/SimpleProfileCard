@@ -9,7 +9,7 @@
 - 自定義主題為亮色或暗色。
 - 添加徽章、背景圖片、個人資料圖片等。
 
-![示例圖片](example.png)
+![範例圖](example.png)
 
 ## Pip 安裝
 
@@ -217,7 +217,7 @@ from profilecard import show_without_repacking
 
 ---
 
-![Example image](example2.png)
+![範例圖](example2.png)
 ```python
 from profilecard import Pf
 
@@ -237,6 +237,31 @@ root.show()
 root.reset()
 ```
 
+---
+
+![範例圖](example3.png)
+```python
+from profilecard import Pf
+
+root = Pf(first=False)
+root.set_style("2")
+root.set_type(type="custom")
+root.add_id("jyst06")
+root.set_name("James")
+root.set_pic("https://i.pinimg.com/564x/59/dc/8d/59dc8d6797b835e746dd99a2df7dcedd.jpg")
+
+root.add_badge(icon="github", text="GitHub", link="https://github.com/jyst06", bg_color="white", color="black")
+
+root.set_theme("light")
+root.add_info("Hello")
+root.set_card_title("About Me")
+root.set_site_title("my site")
+root.add_contect("Nope :(")
+root.set_background_pic(r"https://images6.alphacoders.com/133/1330710.png")
+root.pack()
+root.show()
+root.reset()
+```
 ---
 ## 貢獻
 

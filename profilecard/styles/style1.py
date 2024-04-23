@@ -25,11 +25,17 @@ class Style1:
                             padding: 20px;
                             text-align: center;
                         }}
-                        .profile-card img {{
+                        .profile-image {{
                             width: 100px;
                             height: 100px;
                             border-radius: 50%;
                             margin-bottom: 20px;
+                            margin-left: auto;
+                            margin-right: auto;
+                            background-image: url('{profile_pic_link}');
+                            background-position: center center;
+                            background-size: cover;
+                            background-repeat: no-repeat;
                         }}
                         .profile-card h2 {{
                             margin: 0;
@@ -64,7 +70,7 @@ class Style1:
                 <body class="{bg}">
                     <div class="profile-card">
                         <h1>{card_title}</h1>
-                        <img src="{profile_pic_link}" alt="Profile Picture">
+                        <div class="profile-image"></div>
                         <h2>{profile_name}</h2>
         '''
 
@@ -74,7 +80,7 @@ class Style1:
 
         self.badge = '''
                 <a{badge_link}><img class="badge" alt="Static Badge" src="https://img.shields.io/badge/{badge_text}-_?style={badge_style}&logo={badge_icon}&logoColor={badge_color}&color={badge_bg_color}"></a>
-        '''
+                '''
 
         self.info = '''
                 <div class="line">

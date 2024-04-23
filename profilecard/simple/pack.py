@@ -1,4 +1,4 @@
-from ..styles import Style1
+from ..styles import Style1, Style2,  Style3
 from .valmanager import get_val, get_val_dict, set_val, reset_config
 import os
 from bs4 import BeautifulSoup
@@ -24,10 +24,12 @@ class Parser:
             css, profile, id, badge, info, contect, end = _style()
 
         elif self.style == '2':
-            pass
+            _style = Style2()
+            css, profile, id, badge, info, contect, end = _style()
 
         elif self.style == '3':
-            pass
+            _style = Style3()
+            css, profile, id, badge, info, contect, end = _style()
 
         else:
             raise ValueError(f"Theme:{self.style} is not supported")
@@ -106,33 +108,31 @@ class Parser:
 
 
     def combine(self, css, profile, id, badge, info, contect, end) -> str:
-        #format css
+        # format css
         if self.theme == 'dark':
             css_area = css.format(
                 site_title=self.site_title, t0=self.dark[0], t1=self.dark[1],
                 t2=self.dark[2], t3=self.dark[3], t4=self.dark[4], t5=self.dark[5],
-                background_pic_link=self.background_pic)
+                background_pic_link=self.background_pic, profile_pic_link=self.profile_pic)
 
         elif self.theme == 'light':
             css_area = css.format(
                 site_title=self.site_title, t0=self.light[0], t1=self.light[1],
                 t2=self.light[2], t3=self.light[3], t4=self.light[4], t5=self.light[5],
-                background_pic_link=self.background_pic)
+                background_pic_link=self.background_pic, profile_pic_link=self.profile_pic)
 
         else:
             raise ValueError(f'Theme:{self.theme} is not supported')
 
-        #format profile
+        # format profile
         if self.profile_name == "":
-            raise ValueError(f'profilecard Error : profile name is required')
+            raise ValueError(f'ProfileCard Error : profile name is required')
 
         if self.background_pic:
-            profile_area = profile.format(bg="bg", profile_pic_link=self.profile_pic,
-                                     profile_name=self.profile_name, card_title=self.card_title)
+            profile_area = profile.format(bg="bg", profile_name=self.profile_name, card_title=self.card_title)
 
         else:
-            profile_area = profile.format(bg="", profile_pic_link=self.profile_pic,
-                                     profile_name=self.profile_name, card_title=self.card_title)
+            profile_area = profile.format(bg="", profile_name=self.profile_name, card_title=self.card_title)
 
         #format id
         if self.profile_id:
