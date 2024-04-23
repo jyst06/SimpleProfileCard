@@ -15,7 +15,7 @@
 
 要安裝此模組，您可以簡單地使用 "pip" 命令：
 
-```bash
+``` bash
 pip install profilecard
 ```
 
@@ -23,7 +23,7 @@ pip install profilecard
 
 以下是如何使用此模組中的 `Pf` 類：
 
-```python
+``` python
 from profilecard import *
 
 
@@ -208,7 +208,7 @@ profile.show()
 ---
 
 ## 其他函數
-```python
+``` python
 from profilecard import show_without_repacking
 ```
 #### `show_without_repacking()`
@@ -218,7 +218,7 @@ from profilecard import show_without_repacking
 ---
 
 ![範例圖](example2.png)
-```python
+``` python
 from profilecard import Pf
 
 root = Pf(first=False)
@@ -240,7 +240,7 @@ root.reset()
 ---
 
 ![範例圖](example3.png)
-```python
+``` python
 from profilecard import Pf
 
 root = Pf(first=False)

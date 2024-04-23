@@ -17,7 +17,7 @@ You can also use for advertising like your channel ... on your project
 
 To install this module, you can simply use the "pip" command:
 
-```bash
+``` bash
 pip install profilecard
 ```
 
@@ -25,7 +25,7 @@ pip install profilecard
 
 Here's how you can use the `Pf` class from this module:
 
-```python
+``` python
 from profilecard import *
 
 
@@ -81,9 +81,9 @@ profile.pack()
 # Display site
 profile.show()
 ```
-
 ## API Reference
-```python
+
+``` python
 from profilecard import Pf
 ```
 
@@ -203,7 +203,7 @@ Resets config.
 ---
 
 ## Other Functions
-```python
+``` python
 from profilecard import show_without_repacking
 ```
 #### `show_without_repacking()`
@@ -213,7 +213,7 @@ Display on browser without packing again.
 ---
 
 ![Example image](example2.png)
-```python
+``` python
 from profilecard import Pf
 
 root = Pf(first=False)
@@ -235,7 +235,7 @@ root.reset()
 ---
 
 ![Example image](example3.png)
-```python
+``` python
 from profilecard import Pf
 
 root = Pf(first=False)
