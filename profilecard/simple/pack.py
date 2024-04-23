@@ -1,5 +1,5 @@
 from ..styles import Style1
-from .valmanager import get_val, get_val_dict, set_val
+from .valmanager import get_val, get_val_dict, set_val, reset_config
 import os
 from bs4 import BeautifulSoup
 import requests
@@ -199,6 +199,7 @@ class Pack(Parser):
         with open(self.file_name, 'w') as f:
             f.write(self.text)
 
+
     def show(self):
         run = get_val(type="Run", name="first")
         if run == "false":
@@ -208,6 +209,10 @@ class Pack(Parser):
             set_val(type="Run", name="first", val="stop")
         elif run == "stop":
             pass
+
+
+    def reset(self):
+        reset_config()
 
 
 def show(*, first: bool = False):

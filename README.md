@@ -75,14 +75,17 @@ profile.set_card_title("Handsome guy")
 
 
 # Pack all
-pack = Pack()
+profile.pack()
 
 
 # Display site
-pack.show()
+profile.show()
 ```
 
 ## API Reference
+```python
+from profilecard import Pf
+```
 
 #### `set_style(style: str)`
 
@@ -180,6 +183,56 @@ Add the badge.
 - `link` : (Default : None)
 ---
 
+## Functions
+#### `pack()`
+
+Pack the objects.
+
+---
+
+#### `show()`
+
+Display on browser.
+
+---
+
+#### `reset()`
+
+Resets config.
+
+---
+
+## Other Functions
+```python
+from profilecard import show_without_repacking
+```
+#### `show_without_repacking()`
+
+Display on browser without packing again.
+
+---
+
+![Example image](example2.png)
+```python
+from profilecard import Pf
+
+root = Pf(first=False)
+root.set_style("1")
+root.set_type(type="github", link="https://github.com/jyst06")
+root.add_badge(icon="github", text="GitHub", link="https://github.com/jyst06", bg_color="white", color="black")
+
+root.set_theme("light")
+root.add_info("Hello")
+root.set_card_title("About Me")
+root.set_site_title("my site")
+root.add_contect("Nope :(")
+root.set_background_pic(r"https://i.pinimg.com/564x/f6/0e/23/f60e2340570829c9f4dba61554329dac.jpg")
+root.pack()
+root.show()
+root.reset()
+```
+
+---
 ## Contributing
 
 Contributions are welcome! Please fork the repository and open a pull request with your changes.

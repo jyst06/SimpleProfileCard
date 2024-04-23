@@ -73,11 +73,11 @@ profile.set_card_title("帥哥")
 
 
 # 打包所有設定
-pack = Pack()
+profile.pack()
 
 
-# 顯示網站
-pack.show()
+# 顯示網頁
+profile.show()
 ```
 
 ## API 參考
@@ -188,6 +188,56 @@ pack.show()
 - `link` : (默認：無)
 ---
 
+## 函數
+#### `pack()`
+
+打包物件。
+
+---
+
+#### `show()`
+
+在瀏覽器中顯示。
+
+---
+
+#### `reset()`
+
+重置配置。
+
+---
+
+## 其他函數
+```python
+from profilecard import show_without_repacking
+```
+#### `show_without_repacking()`
+
+直接在瀏覽器中顯示，無需重新打包。
+
+---
+
+![Example image](example2.png)
+```python
+from profilecard import Pf
+
+root = Pf(first=False)
+root.set_style("1")
+root.set_type(type="github", link="https://github.com/jyst06")
+root.add_badge(icon="github", text="GitHub", link="https://github.com/jyst06", bg_color="white", color="black")
+
+root.set_theme("light")
+root.add_info("Hello")
+root.set_card_title("About Me")
+root.set_site_title("my site")
+root.add_contect("Nope :(")
+root.set_background_pic(r"https://i.pinimg.com/564x/f6/0e/23/f60e2340570829c9f4dba61554329dac.jpg")
+root.pack()
+root.show()
+root.reset()
+```
+
+---
 ## 貢獻
 
 歡迎貢獻！請 fork 倉庫並開啟一個包含您更改的 pull 請求。

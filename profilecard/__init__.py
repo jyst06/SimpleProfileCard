@@ -1,7 +1,7 @@
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 
 from .simple import Pack, show
-from .simple import set_val, get_val, reset_config
+from .simple import set_val, get_val
 
 
 class Pf:
@@ -184,9 +184,41 @@ class Pf:
         """
 
         if icon:
-            set_val(type='Badge', name=f"badge{self.badge_counter}", val=f"{icon},{style},{color},{bg_color},{text},{link}")
+            set_val(type='Badge', name=f"badge{self.badge_counter}",
+                    val=f"{icon},{style},{color},{bg_color},{text},{link}")
 
             self.badge_counter += 1
             self.badge = f"Badge:{icon},{style},{color},{bg_color},{text},{link}"
 
             return f"Badge:{self.badge}"
+
+        else:
+            raise ValueError("ProfileCard Error : badge icon are required")
+
+
+    def pack(self):
+        """
+        This function is use to pack the profile card
+        """
+        self.pack = Pack()
+
+
+    def show(self):
+        """
+        This function is use to show the profile card
+        """
+        self.pack.show()
+
+
+    def reset(self):
+        """
+        This function is use to reset the profile card
+        """
+        self.pack.reset()
+
+
+def show_without_repacking(*, first : bool = False):
+    """
+    This function is use to show the profile card without repacking
+    """
+    show(first=first)
