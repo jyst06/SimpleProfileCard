@@ -1,11 +1,14 @@
 from setuptools import setup, find_packages
 
+with open("README.md", "r", encoding="utf-8") as fh:
+    long_description = fh.read()
+
 setup(
     name='profilecard',
     version='1.0.3',
     packages=find_packages(),
-    long_description=open('README.md').read(),
-    long_description_content_type='text/markdown',
+    long_description=long_description,
+    long_description_content_type="text/markdown",
     include_package_data=True,
     package_data={'': ['*.ini']},
     install_requires=[
