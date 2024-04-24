@@ -120,6 +120,10 @@ profile.show()
 
 ---
 
+### init中的其他方法 `reset_profilecard_config()`, `show_without_repacking()`
+
+---
+
 ## 貢獻
 
 歡迎貢獻！請分支本倉庫並打開一個帶有您更改的拉取請求。

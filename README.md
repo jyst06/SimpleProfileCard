@@ -70,6 +70,9 @@ profile.pack()
 
 # Display site
 profile.show()
+
+# Make sure the config reset to default
+profile.reset()
 ```
 
 ## API Reference
@@ -115,6 +118,10 @@ Adds a badge.
 ---
 
 ### Additional methods include `set_pic`, `set_name`, `set_background_pic`, `add_info`, `add_contect`, `set_site_title`, `set_card_title`, `pack`, `show`, and `reset`.
+
+---
+
+### Other methods in init file `reset_profilecard_config()`, `show_without_repacking()`
 
 ---
 
