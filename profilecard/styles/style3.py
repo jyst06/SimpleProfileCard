@@ -4,7 +4,7 @@ class Style3:
                 <!DOCTYPE html>
                 <html lang="zh">
                 <head>
-                    <meta charset="UTF-8">
+                    <meta charset="big-5">
                     <title>{site_title}</title>
                     <style>
                         body {{
