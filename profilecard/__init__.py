@@ -1,4 +1,4 @@
-__version__ = "1.0.3"
+__version__ = "1.0.4"
 
 from .simple import Pack, show
 from .simple import set_val, get_val
@@ -9,7 +9,7 @@ class Pf:
     This class is use to setup a personal profile card
     """
     def __init__(self, *, first : bool = False):
-        self.style = '1'
+        self.style = "1"
         self.type = None
         self.link = None
         self.pic = None

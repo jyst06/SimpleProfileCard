@@ -57,3 +57,8 @@ def reset_config():
         config.write(configfile)
 
     print("Configuration reset to default values.")
+
+
+if __name__ == '__main__':
+    a = "1"
+    set_val(type="Optional", name="style", val=a)

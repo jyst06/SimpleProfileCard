@@ -113,4 +113,3 @@ profile.show()
 ## 許可證
 
 此項目授予 MIT 許可證 - 詳見 [LICENSE](LICENSE.md) 文件。
-```
