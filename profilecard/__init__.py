@@ -1,7 +1,7 @@
-__version__ = "1.0.6"
+__version__ = "1.0.7"
 
 from .simple import Pack, show
-from .simple import set_val, get_val
+from .simple import set_val, get_val, reset_config as rc
 
 
 class Pf:
@@ -212,9 +212,16 @@ class Pf:
 
     def reset(self):
         """
-        This function is use to reset the profile card
+        This function is use to reset the config file
         """
         self.pack.reset()
+
+
+def reset_profilecard_config():
+    """
+    This function is use to reset the config file
+    """
+    rc()
 
 
 def show_without_repacking(*, first : bool = False):

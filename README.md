@@ -51,7 +51,7 @@ profile.add_badge(icon="facebook", text="facebook", color="black", bg_color="whi
 # link : Default is None
 
 # Add some information
-profile.add_info("OwO")
+profile.add_info("OwO<br>Hello") #Use <br> as \n , you can also add emoji by searching "HTML emoji code" to get the code
 
 # Add some contact information
 profile.add_contect("My mail: abc@gmail.com")
@@ -76,10 +76,16 @@ profile.show()
 
 The following functions are available in the `Pf` class:
 
+### `help(profilecard)` get the usage in python IDE
+
+---
+
 ### `set_style(style: str)`
 Sets the style of the profile card.
 - **Parameters**:
   - `style`: A string representing the style ('1', '2', '3'). Default is '1'.
+
+---
 
 ### `set_type(type: str, link: str)`
 Sets the type of profile card and optionally the profile page link.
@@ -87,10 +93,14 @@ Sets the type of profile card and optionally the profile page link.
   - `type`: A string representing the type ('github', 'youtube', 'reddit', 'custom').
   - `link`: A string representing the link to the profile page.
 
+---
+
 ### `set_theme(theme: str)`
 Sets the theme of the card.
 - **Parameters**:
   - `theme`: A string representing the theme ("light", "dark").
+
+---
 
 ### `add_badge(icon: str, style: str, color: str, bg_color: str, text: str, link: str)`
 Adds a badge.
@@ -102,7 +112,11 @@ Adds a badge.
   - `text`: Text to display on the badge, default is None.
   - `link`: Link to be associated with the badge, default is None.
 
+---
+
 ### Additional methods include `set_pic`, `set_name`, `set_background_pic`, `add_info`, `add_contect`, `set_site_title`, `set_card_title`, `pack`, `show`, and `reset`.
+
+---
 
 ## Contributing
 

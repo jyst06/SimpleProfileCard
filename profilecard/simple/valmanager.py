@@ -40,7 +40,7 @@ def reset_config():
         'profile_name': ''
     }
     config['Optional'] = {
-        'style': "'1'",
+        'style': "1",
         'theme': 'dark',
         'site_title': 'About Author',
         'card_title': 'About Me',

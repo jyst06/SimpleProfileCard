@@ -2,9 +2,7 @@ class Style1:
     def __init__(self):
         self.css = '''
                 <!DOCTYPE html>
-                <html lang="zh">
                 <head>
-                    <meta charset="big-5">
                     <title>{site_title}</title>
                     <style>
                         body {{

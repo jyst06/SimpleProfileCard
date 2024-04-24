@@ -51,7 +51,7 @@ profile.add_badge(icon="facebook", text="facebook", color="black", bg_color="whi
 # link：徽章關聯的鏈接，默認為 None
 
 # 添加一些信息
-profile.add_info("OwO")
+profile.add_info("OwO<br>Hello") #<br>當作換行符使用 , 添加emoji可以透過搜尋"HTML emoji code"來查詢對應代碼
 
 # 添加一些聯繫信息
 profile.add_contect("我的郵件：abc@gmail.com")
@@ -76,10 +76,16 @@ profile.show()
 
 `Pf` 類中提供以下函數：
 
+### `help(profilecard)` 在IDE中取得使用方法
+
+---
+
 ### `set_style(style: str)`
 設定資料卡的風格。
 - **參數**：
   - `style`：一個代表風格的字符串（'1', '2', '3'）。默認為 '1'。
+
+---
 
 ### `set_type(type: str, link: str)`
 設定資料卡的類型和可選的個
@@ -89,10 +95,14 @@ profile.show()
   - `type`：一個代表類型的字符串（'github', 'youtube', 'reddit', 'custom'）。
   - `link`：一個代表鏈接的字符串。
 
+---
+
 ### `set_theme(theme: str)`
 設定卡片的主題。
 - **參數**：
   - `theme`：一個代表主題的字符串（"light", "dark"）。
+
+---
 
 ### `add_badge(icon: str, style: str, color: str, bg_color: str, text: str, link: str)`
 添加一個徽章。
@@ -104,7 +114,11 @@ profile.show()
   - `text`：顯示在徽章上的文字，默認為 None。
   - `link`：與徽章關聯的鏈接，默認為 None。
 
+---
+
 ### 還包括其他方法如 `set_pic`, `set_name`, `set_background_pic`, `add_info`, `add_contect`, `set_site_title`, `set_card_title`, `pack`, `show`, 和 `reset`。
+
+---
 
 ## 貢獻
 
