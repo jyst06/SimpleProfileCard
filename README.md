@@ -2,7 +2,7 @@
 
 # Personal Profile Card Module
 
-This module provides a simple way to create a personal profile cards , it can copy user data in various platforms like GitHub, YouTube, and Reddit. It includes customization options such as style, type, theme, and more. You can also use it for advertising your channel on your project.
+This module provides a simple way to create a personal profile cards , it can copy user data from various platforms like GitHub, YouTube, and Reddit. It includes customization options such as style, type, theme, and more. You can also use it for advertising your channel on your project.
 
 ## Features
 
