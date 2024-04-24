@@ -1,3 +1,5 @@
+[[English](README.md)|[中文](README_zh.md)]
+
 # Personal Profile Card Module
 
 This module provides a simple way to create and manage personal profile cards for various platforms like GitHub, YouTube, and Reddit. It includes customization options such as style, type, theme, and more. You can also use it for advertising your channel on your project.
