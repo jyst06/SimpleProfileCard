@@ -1,4 +1,4 @@
-__version__ = "1.0.7"
+__version__ = "1.0.8"
 
 from .simple import Pack, show
 from .simple import set_val, get_val, reset_config as rc
