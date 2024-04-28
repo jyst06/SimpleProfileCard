@@ -169,7 +169,7 @@ profile.show()
 
 人頁面鏈接。
 - **參數**：
-  - `type`：一個代表類型的字符串（'github', 'youtube', 'reddit', 'custom'）。
+  - `type`：一個代表類型的字符串（'github', 'youtube', 'reddit', 'leetcode', 'custom'）。
   - `link`：一個代表鏈接的字符串。
 
 ---

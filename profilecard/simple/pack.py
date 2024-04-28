@@ -64,6 +64,9 @@ class Parser:
         elif type == 'reddit':
             self.reddit_parse(link)
 
+        elif type == 'leetcode':
+            self.leetcode_parse(link)
+
         elif type == 'custom':
             self.custom_parse(profile_pic_link, profile_name, profile_id)
 
@@ -95,6 +98,25 @@ class Parser:
         self.profile_pic = soup.find("img").get("src")
         self.profile_name = soup.find("h1").text.strip()
         self.profile_id = soup.find("p").text.strip()
+
+
+    def leetcode_parse(self, link) -> None:
+        temp = link.split('/')
+        if temp[-1]:
+            account = temp[-1]
+        else:
+            account = temp[-2]
+
+        original_string = '{ matchedUser(username: "account") { profile { realName userAvatar } } }'
+        query = original_string.replace('account', account)
+        data = {
+            "query": query,
+        }
+        res = requests.post(url='https://leetcode.com/graphql/', json=data)
+        profile = res.json()["data"]['matchedUser']['profile']
+        self.profile_pic = profile['userAvatar']
+        self.profile_name = profile['realName']
+        self.profile_id = None
 
 
     def custom_parse(self, profile_pic_link, profile_name, profile_id) -> None:

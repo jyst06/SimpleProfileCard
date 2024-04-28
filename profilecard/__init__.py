@@ -52,7 +52,7 @@ class Pf:
         if type == 'custom':
             set_val(type='Parameters', name="type", val=type)
 
-        elif type in ['github', 'youtube', 'reddit']:
+        elif type in ['github', 'youtube', 'reddit', 'leetcode']:
             set_val(type='Parameters', name="type", val=type)
             set_val(type='Parameters', name="profile_page_link", val=link)
 

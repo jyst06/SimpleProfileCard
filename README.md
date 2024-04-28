@@ -170,7 +170,7 @@ Sets the style of the profile card.
 ### `set_type(type: str, link: str)`
 Sets the type of profile card and optionally the profile page link.
 - **Parameters**:
-  - `type`: A string representing the type ('github', 'youtube', 'reddit', 'custom').
+  - `type`: A string representing the type ('github', 'youtube', 'reddit', 'leetcode', 'custom').
   - `link`: A string representing the link to the profile page.
 
 ---
